@@ -106,10 +106,16 @@
 	
 	// 01. PreLoader Js//
 	$(window).on('load', function () {
-		$("#preloader").fadeOut(500, function () {
-			document.documentElement.classList.remove('is-loading');
-			document.body.classList.remove('is-loading');
-		});
+		const minimumLoaderTime = 2000;
+		const elapsedTime = performance.now();
+		const remainingTime = Math.max(0, minimumLoaderTime - elapsedTime);
+
+		setTimeout(function () {
+			$("#preloader").fadeOut(500, function () {
+				document.documentElement.classList.remove('is-loading');
+				document.body.classList.remove('is-loading');
+			});
+		}, remainingTime);
 	});
 	$(window).on('load', function () {
 		$("#loading").fadeOut(500);
