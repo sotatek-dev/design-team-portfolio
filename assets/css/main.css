@@ -34681,7 +34681,7 @@ body.is-loading {
 .tp-contact-form-btn button:hover span span.text-2 {
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%) scale(2);
+  transform: translateY(-50%);
 }
 .tp-contact-category-btn {
   font-size: 18px;
@@ -48344,7 +48344,7 @@ p.color-g {
   line-height: 50px;
   text-align: center;
   text-transform: uppercase;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(2);
 }
 
 #preloader .loading span {
