@@ -48318,13 +48318,76 @@ p.color-g {
   background-color: var(--tp-common-white);
 }
 
-/* Preloaders are disabled globally so every page renders immediately. */
-#preloader,
-#loading {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
+/* Du Tran page loader */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: block;
+  background: #000;
+}
+
+#preloader .loading {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 150px;
+  margin: auto;
+  color: #fff;
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+  line-height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateY(-50%);
+}
+
+#preloader .loading span {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+#preloader .loading::before {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 128px;
+  height: 36px;
+  margin: auto;
+  content: "";
+  background: #367dff;
+  animation: du-tran-loading-before 2s infinite ease-in-out;
+}
+
+#preloader .loading::after {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 14px;
+  height: 60px;
+  margin: auto;
+  content: "";
+  background: #8b83ff;
+  opacity: 0.5;
+  animation: du-tran-loading-after 2s infinite ease-in-out;
+}
+
+@keyframes du-tran-loading-before {
+  0%, 100% { transform: translateX(-14px); }
+  50% { transform: translateX(14px); }
+}
+
+@keyframes du-tran-loading-after {
+  0%, 100% { transform: translateX(-50px); }
+  50% { transform: translateX(50px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #preloader .loading::before,
+  #preloader .loading::after {
+    animation: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
