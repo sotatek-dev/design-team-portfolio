@@ -33387,6 +33387,11 @@ body.tp-magic-cursor #magic-cursor {
   -o-border-radius: 100%;
   background: #000;
 }
+
+html.is-loading,
+body.is-loading {
+  overflow: hidden;
+}
 @media (max-width: 767px) {
   .tp-perspective-slider .tp-perspective-inner .tp-perspective-image:before {
     content: none;
@@ -34676,7 +34681,7 @@ body.tp-magic-cursor #magic-cursor {
 .tp-contact-form-btn button:hover span span.text-2 {
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(2);
 }
 .tp-contact-category-btn {
   font-size: 18px;

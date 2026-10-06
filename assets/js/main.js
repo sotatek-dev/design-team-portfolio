@@ -106,7 +106,10 @@
 	
 	// 01. PreLoader Js//
 	$(window).on('load', function () {
-		$("#preloader").fadeOut(500);
+		$("#preloader").fadeOut(500, function () {
+			document.documentElement.classList.remove('is-loading');
+			document.body.classList.remove('is-loading');
+		});
 	});
 	$(window).on('load', function () {
 		$("#loading").fadeOut(500);
