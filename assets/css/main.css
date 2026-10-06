@@ -48318,4 +48318,13 @@ p.color-g {
   background-color: var(--tp-common-white);
 }
 
+/* Preloaders are disabled globally so every page renders immediately. */
+#preloader,
+#loading {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 /*# sourceMappingURL=main.css.map */
