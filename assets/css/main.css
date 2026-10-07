@@ -21344,6 +21344,16 @@ body.tp-magic-cursor #magic-cursor {
   letter-spacing: -0.02em;
   font-family: var(--tp-ff-dirtyline);
 }
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .design-project-title {
+    font-size: 68px;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+  .design-project-content.pl-200 {
+    padding-left: 80px;
+  }
+}
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .design-project-title {
     font-size: 65px;
