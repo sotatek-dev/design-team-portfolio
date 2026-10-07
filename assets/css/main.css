@@ -18305,6 +18305,7 @@ body.tp-magic-cursor #magic-cursor {
   display: inline-block;
   letter-spacing: -0.02em;
   font-family: var(--tp-ff-dirtyline);
+  transform: translateX(-0.03em);
 }
 @media only screen and (min-width: 1701px) and (max-width: 1800px) {
   .design-service-big-text h4 {
